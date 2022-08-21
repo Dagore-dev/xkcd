@@ -1,4 +1,4 @@
-import Header from './Header'
+import Header from './NavBar/Header'
 
 export default function PrimaryLayout({ children }) {
   return (
