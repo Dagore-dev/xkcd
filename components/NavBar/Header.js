@@ -4,7 +4,7 @@ import SiteTitle from './SiteTitle'
 
 export default function Header() {
   return (
-    <header className='w-full h-16 bg-indigo-600 drop-shadow-lg sticky top-0' >
+    <header className='w-full h-16 bg-indigo-600 drop-shadow-lg sticky top-0 z-10' >
       <ResponsiveNavbar siteTitle={<SiteTitle />}>
         <NavItem name='Home' route='/' />
         <NavItem name='About' route='/about' />
