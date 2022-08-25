@@ -15,16 +15,16 @@ export default function Comic({ id, img, alt, title, width, height, prevId, hasP
       </Head>
 
       <PrimaryLayout>
-        <article className='flex flex-col justify-center align-middle p-5'>
+        <article className='flex flex-col justify-evenly items-center p-5 min-h-full md:w-3/5 md:mx-auto shadow-xl'>
           <h1 className='text-4xl text-center font-bold'>{title}</h1>
 
           <span className='py-5 text-center'>
-            <Image src={img} width={width} height={height} alt={alt} objectFit='scale-down' />
+            <Image src={img} width={width} height={height} alt={alt} objectFit='contain' />
           </span>
 
           <p className='text-center'>{alt}</p>
 
-          <div>
+          <div className='flex justify-evenly w-80 py-5'>
             {hasPrev && <PaginationLink text='Previous' comicId={prevId} />}
             {hasNext && <PaginationLink text='Next' comicId={nextId} />}
           </div>
