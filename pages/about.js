@@ -6,7 +6,7 @@ export default function About() {
   return (
     <>
       <Head>
-        <title>xkcd comics</title>
+        <title>About xkcd comics</title>
         <meta name="description" content="xkcd - Comics for developers" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
