@@ -9,7 +9,7 @@ export default function Comic({ id, img, alt, title, width, height, prevId, hasP
   return (
     <>
       <Head>
-        <title>xkcd comics</title>
+        <title>xkcd: {title}</title>
         <meta name="description" content="xkcd - Comics for developers" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
