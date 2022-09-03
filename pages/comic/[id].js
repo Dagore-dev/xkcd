@@ -6,10 +6,12 @@ import fs from 'fs-extra'
 import path from 'path'
 
 export default function Comic({ id, img, alt, title, width, height, prevId, hasPrev, nextId, hasNext }) {
+  const headTitle = `xkcd: ${title}`
+
   return (
     <>
       <Head>
-        <title>xkcd: {title}</title>
+        <title>{headTitle}</title>
         <meta name="description" content="xkcd - Comics for developers" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
