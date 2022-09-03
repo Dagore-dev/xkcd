@@ -7,7 +7,6 @@ export default function Search({ query }) {
       <Head>
         <title>Find a xkcd comic</title>
         <meta name="description" content={`Search results for ${query}`} />
-        <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <PrimaryLayout>

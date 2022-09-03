@@ -11,7 +11,6 @@ export default function Home({ comics }) {
       <Head>
         <title>xkcd comics</title>
         <meta name="description" content="xkcd - Comics for developers" />
-        <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <PrimaryLayout>
