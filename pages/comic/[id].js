@@ -4,6 +4,8 @@ import Image from 'next/image'
 import PaginationLink from '../../components/PaginationLink'
 import fs from 'fs-extra'
 import path from 'path'
+import H1 from '../../components/H1'
+import PrimaryContainer from '../../components/PrimaryContainer'
 
 export default function Comic({ id, img, alt, title, width, height, prevId, hasPrev, nextId, hasNext }) {
   const headTitle = `xkcd: ${title}`
@@ -16,8 +18,8 @@ export default function Comic({ id, img, alt, title, width, height, prevId, hasP
       </Head>
 
       <PrimaryLayout>
-        <article className='flex flex-col justify-evenly items-center p-5 min-h-full md:w-3/5 md:mx-auto shadow-xl'>
-          <h1 className='text-4xl text-center font-bold'>{title}</h1>
+        <PrimaryContainer>
+          <H1>{title}</H1>
 
           <span className='py-5 text-center'>
             <Image src={img} width={width} height={height} alt={alt} objectFit='contain' />
@@ -29,7 +31,7 @@ export default function Comic({ id, img, alt, title, width, height, prevId, hasP
             {hasPrev && <PaginationLink text='Previous' comicId={prevId} />}
             {hasNext && <PaginationLink text='Next' comicId={nextId} />}
           </div>
-        </article>
+        </PrimaryContainer>
       </PrimaryLayout>
     </>
   )

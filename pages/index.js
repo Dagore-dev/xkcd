@@ -2,6 +2,7 @@ import Head from 'next/head'
 import PrimaryLayout from '../components/PrimaryLayout'
 import LatestComics from '../components/LatestComics'
 import fs from 'fs-extra'
+import H1 from '../components/H1'
 
 export default function Home({ comics }) {
   const { ok, content } = comics
@@ -14,7 +15,7 @@ export default function Home({ comics }) {
       </Head>
 
       <PrimaryLayout>
-        <h1 className='text-4xl text-center font-bold'>Latest comics</h1>
+        <H1>Latest comics</H1>
 
         {
           ok
