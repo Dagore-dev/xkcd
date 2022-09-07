@@ -29,7 +29,9 @@ export default function Home({ comics }) {
 
 export async function getStaticProps(context) {
   const files = await fs.readdir('./comics')
-  const lastSixComicsFiles = files.slice(-6, files.length)
+  const lastSixComicsFiles = files
+    .sort((a, b) => comicFilenameToNumber(a) - comicFilenameToNumber(b))
+    .slice(-6)
   const promisesReadComics = lastSixComicsFiles.map(async (comic) => await fs.readJSON(`./comics/${comic}`, 'utf-8'))
 
   try {
@@ -46,4 +48,8 @@ export async function getStaticProps(context) {
       }
     }
   }
+}
+
+function comicFilenameToNumber(fileName) {
+  return Number(fileName.slice(0, -5))
 }
